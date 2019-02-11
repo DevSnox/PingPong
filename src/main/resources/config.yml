@@ -1,0 +1,36 @@
+
+# [ --------------------------------------------------------------------------------------- ] #
+#   -= PingPong =-                                                                            #
+#   -= Author: DevSnox =-                                                                     #
+#   -= Version: 1.1 =-                                                                        #
+#   -= Contact: E-mail: me.devsnox@gmail.com Skype: live:chaos3729 Discord: DevSnox#5642 =-   #
+#   -= Informations:                                                                          #
+#   -= Please send Errors per PM on spigotmc.org =-                                           #
+#   -= When you use this Plugin please rate it on spigotmc.org =-                             #
+# [ --------------------------------------------------------------------------------------- ] #
+
+
+# { Messages HELP: You can use all colorcodes with '&' before! }
+
+  # { HELP: The prefix displayed before every message }
+  prefix: "&e[&cPingPong&e]"
+
+  # { HELP: When you don't wont the prefix before each message }
+  prefix-enabled: true
+
+  # { HELP: Message shown when console try to get ping }
+  console-message: "&cYou must be a player to execute this command!"
+
+  # { HELP: The message sent when a player try to get his ping without permissions }
+  no-permissions: "&cSorry but you don't have the permissions to do that!"
+
+  # { HELP: The message sent to players requesting ping from a offline player! PLACEHOLDERS: %player% }
+  player-not-online: "&cSorry but the player %player% isn't online now!"
+
+  # { HELP: The message shown to every player requesting his ping. PLACEHOLDERS: %ping%}
+  ping-message: "&aYou have a ping of &b%ping% &ams!"
+
+  # { HELP: The message be shown to every player requesting the ping of another player. PLACEHOLDERS: %player% and %ping% }
+  ping-message-other: "&aThe player &e%player% &ahas a ping of &b%ping% &ams!"
+
+#{ --------- }
