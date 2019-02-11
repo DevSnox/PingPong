@@ -46,7 +46,7 @@ public final class Loader {
 
     private void registerCommands() {
         this.logByFormat("register commands");
-        new PingCommand(this.messageHandler);
+        this.javaPlugin.getCommand("ping").setExecutor(new PingCommand(this.messageHandler));
     }
 
     private void initializeMetrics() {
