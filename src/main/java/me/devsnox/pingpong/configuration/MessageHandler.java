@@ -25,7 +25,7 @@ public class MessageHandler {
 
     public String get(final String id) {
         return new StringBuilder()
-                .append(this.yamlConfiguration.getBoolean("prefix-enabled") ? this.color(this.yamlConfiguration.getString("prefix")) : "")
+                .append(this.yamlConfiguration.getBoolean("prefix-enabled") ? this.color(this.yamlConfiguration.getString("prefix")) + " " : "")
                 .append(this.yamlConfiguration.contains(id) ? this.color(this.yamlConfiguration.getString(id.toLowerCase())) : "")
         .toString();
     }
