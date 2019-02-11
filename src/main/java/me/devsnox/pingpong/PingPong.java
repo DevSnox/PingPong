@@ -1,8 +1,7 @@
 package me.devsnox.pingpong;
 
 import me.devsnox.pingpong.commands.PingCommand;
-import me.devsnox.pingpong.configuration.PingConfiguration;
-import me.devsnox.pingpong.configuration.PingConfigurator;
+import me.devsnox.pingpong.configuration.MessageHandler;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class PingPong extends JavaPlugin implements CommandExecutor {
 
-    private PingConfigurator pingConfigurator;
+    private MessageHandler messageHandler;
 
     @Override
     public void onEnable() {
@@ -36,10 +35,10 @@ public class PingPong extends JavaPlugin implements CommandExecutor {
         this.saveResource("config.yml", false);
 
         Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= loading configurations =-");
-        pingConfigurator = new PingConfigurator(this);
+        this.messageHandler = new MessageHandler(this.getDataFolder());
 
         Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= register command =-");
-        this.getCommand("ping").setExecutor(new PingCommand(this.pingConfigurator.getPingConfiguration()));
+        this.getCommand("ping").setExecutor(new PingCommand(this.messageHandler));
 
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "sucessfully enabled PingPong");
 
