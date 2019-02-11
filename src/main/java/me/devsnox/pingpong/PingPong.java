@@ -31,8 +31,8 @@ public class PingPong extends JavaPlugin implements CommandExecutor {
         Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= register metrics =-");
         new Metrics(this);
 
-        Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= creating config.yml =-");
-        this.saveResource("config.yml", false);
+        Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= creating messages.yml =-");
+        this.saveResource("messages.yml", false);
 
         Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "-= loading configurations =-");
         this.messageHandler = new MessageHandler(this.getDataFolder());

@@ -13,7 +13,7 @@ public class MessageHandler {
     private final YamlConfiguration yamlConfiguration;
 
     public MessageHandler(final File dataFolder) {
-        this.config = new File(dataFolder + File.separator + "config.yml");
+        this.config = new File(dataFolder + File.separator + "messages.yml");
         this.yamlConfiguration = new UTF8YamlConfiguration();
 
         try {
