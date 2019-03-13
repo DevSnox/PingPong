@@ -38,12 +38,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
@@ -71,26 +65,6 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>libraries/craftbukkit-1.8.8-R0.1-SNAPSHOT-latest.jar</file>
-                            <groupId>org.bukkit</groupId>
-                            <artifactId>craftbukkit</artifactId>
-                            <version>1.8.8-R0.1-SNAPSHOT</version>
-                            <packaging>jar</packaging>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
