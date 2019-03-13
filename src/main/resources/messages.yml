@@ -1,10 +1,11 @@
-
 # [ --------------------------------------------------------------------------------------- ] #
 #   -= PingPong =-                                                                            #
+#                                                                                             #
 #   -= Author: DevSnox =-                                                                     #
 #   -= Version: 1.2 =-                                                                        #
-#   -= Contact: E-mail: me.devsnox@gmail.com Skype: live:chaos3729 Discord: DevSnox#5642 =-   #
-#   -= Informations:                                                                          #
+#   -= Contact: E-mail: me.devsnox@gmail.com Discord: DevSnox#0001 =-                         #
+#                                                                                             #
+#   -= Informations: =-                                                                       #
 #   -= Please send Errors per PM on spigotmc.org =-                                           #
 #   -= When you use this Plugin please rate it on spigotmc.org =-                             #
 # [ --------------------------------------------------------------------------------------- ] #
@@ -15,8 +16,8 @@
   # { HELP: The prefix displayed before every message }
   prefix: "&e[&cPingPong&e]"
 
-  # { HELP: When you don't wont the prefix before each message }
-  prefix-enabled: true
+  # { HELP: When you don't want the prefix before each message }
+  prefix-enabled: trues
 
   # { HELP: Message shown when console try to get ping }
   error.console-ping-request: "&cYou must be a player to execute this command!"

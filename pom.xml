@@ -6,7 +6,7 @@
 
     <groupId>me.devsnox</groupId>
     <artifactId>PingPong</artifactId>
-    <version>1.2-RELEASE-patch-1</version>
+    <version>1.2.2-RELEASE</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

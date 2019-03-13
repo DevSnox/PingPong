@@ -22,7 +22,10 @@ public class PingCommand implements CommandExecutor {
             if (sender instanceof Player) {
                 if (sender.hasPermission("pingpong.ping")) {
                     final Player player = ((Player) sender).getPlayer();
-                    player.sendMessage(this.messageHandler.get("ping").replaceAll("%ping%", String.valueOf(((CraftPlayer) player).getHandle().ping)));
+
+                    player.sendMessage(this.messageHandler.get("ping")
+                            .replaceAll("%ping%", String.valueOf(this.getPing(player))));
+
                     return true;
                 }
 
@@ -35,9 +38,10 @@ public class PingCommand implements CommandExecutor {
             if (sender.hasPermission("pingpong.ping.other")) {
                 if (Bukkit.getPlayer(args[0]) != null) {
                     final Player target = Bukkit.getPlayer(args[0]);
+
                     sender.sendMessage(this.messageHandler.get("ping.other")
                             .replaceAll("%player%", target.getName())
-                            .replaceAll("%ping%", String.valueOf(((CraftPlayer) target).getHandle().ping)));
+                            .replaceAll("%ping%", String.valueOf(getPing(target))));
                 } else {
                     sender.sendMessage(this.messageHandler.get("error.target-not-online").replaceAll("%player%", args[0]));
                 }
@@ -46,5 +50,9 @@ public class PingCommand implements CommandExecutor {
             }
         }
         return false;
+    }
+
+    private int getPing(Player player) {
+        return ((CraftPlayer) player).getHandle().ping;
     }
 }
