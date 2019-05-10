@@ -40,7 +40,7 @@ public class PingCommand implements CommandExecutor {
                 if (Bukkit.getPlayer(args[0]) != null) {
                     final Player target = Bukkit.getPlayer(args[0]);
 
-                    sender.sendMessage(this.messageHandler.get("ping.other")
+                    sender.sendMessage(this.messageHandler.get("ping-other")
                             .replaceAll("%player%", target.getName())
                             .replaceAll("%ping%", String.valueOf(getPing(target))));
                 } else {
