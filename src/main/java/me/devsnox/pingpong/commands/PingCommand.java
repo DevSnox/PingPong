@@ -30,24 +30,24 @@ public class PingCommand implements CommandExecutor {
                     return true;
                 }
 
-                sender.sendMessage(this.messageHandler.get("error.no-permissions"));
+                sender.sendMessage(this.messageHandler.get("error-no-permissions"));
                 return false;
             }
-            sender.sendMessage(this.messageHandler.get("error.console-ping-request"));
+            sender.sendMessage(this.messageHandler.get("error-console-ping-request"));
             return false;
         } else if (args.length == 1) {
             if (sender.hasPermission("pingpong.ping.other")) {
                 if (Bukkit.getPlayer(args[0]) != null) {
                     final Player target = Bukkit.getPlayer(args[0]);
 
-                    sender.sendMessage(this.messageHandler.get("ping.other")
+                    sender.sendMessage(this.messageHandler.get("ping-other")
                             .replaceAll("%player%", target.getName())
                             .replaceAll("%ping%", String.valueOf(getPing(target))));
                 } else {
-                    sender.sendMessage(this.messageHandler.get("error.target-not-online").replaceAll("%player%", args[0]));
+                    sender.sendMessage(this.messageHandler.get("error-target-not-online").replaceAll("%player%", args[0]));
                 }
             } else {
-                sender.sendMessage(this.messageHandler.get("error.no-permissions"));
+                sender.sendMessage(this.messageHandler.get("error-no-permissions"));
             }
         }
         return false;
